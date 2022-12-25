@@ -1,0 +1,555 @@
+ERROR - 2022-12-12 01:06:58 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:06:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:07:40 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:07:40 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:07:56 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:07:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:07:57 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:07:57 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:07:58 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:07:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:07:58 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:07:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:08:28 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:08:28 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:08:34 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:08:34 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:08:35 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:08:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:08:58 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:08:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:09:26 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:09:26 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 01:09:27 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'donasi_panti', 3306, '', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#9 {main}
+CRITICAL - 2022-12-12 01:09:27 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH/Controllers/Api/Auth.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 5 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2022-12-12 01:09:34 --> md5(): Passing null to parameter #1 ($string) of type string is deprecated
+in APPPATH/Controllers/Api/Auth.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'md5(): Passing null to parameter #1 ($string) of type string is deprecated', 'APPPATH/Controllers/Api/Auth.php', 41)
+ 2 APPPATH/Controllers/Api/Auth.php(41): md5(null)
+ 3 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 4 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2022-12-12 01:09:35 --> md5(): Passing null to parameter #1 ($string) of type string is deprecated
+in APPPATH/Controllers/Api/Auth.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'md5(): Passing null to parameter #1 ($string) of type string is deprecated', 'APPPATH/Controllers/Api/Auth.php', 41)
+ 2 APPPATH/Controllers/Api/Auth.php(41): md5(null)
+ 3 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 4 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2022-12-12 01:09:36 --> md5(): Passing null to parameter #1 ($string) of type string is deprecated
+in APPPATH/Controllers/Api/Auth.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'md5(): Passing null to parameter #1 ($string) of type string is deprecated', 'APPPATH/Controllers/Api/Auth.php', 41)
+ 2 APPPATH/Controllers/Api/Auth.php(41): md5(null)
+ 3 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->registrasi()
+ 4 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2022-12-12 01:22:36 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH/Controllers/Api/Auth.php on line 82.
+ 1 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->login()
+ 2 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2022-12-12 01:25:14 --> Undefined variable $data_user
+in APPPATH/Controllers/Api/Auth.php on line 90.
+ 1 APPPATH/Controllers/Api/Auth.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_user', 'APPPATH/Controllers/Api/Auth.php', 90)
+ 2 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2022-12-12 01:25:16 --> Undefined variable $data_user
+in APPPATH/Controllers/Api/Auth.php on line 90.
+ 1 APPPATH/Controllers/Api/Auth.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_user', 'APPPATH/Controllers/Api/Auth.php', 90)
+ 2 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-12-12 02:25:20 --> mysqli_sql_exception: Unknown column 'lokasi' in 'field list' in /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT `email`,...', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `email`,...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `email`,...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `email`,...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/app/Controllers/Api/Auth.php(79): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(929): App\Controllers\api\Auth->login()
+#6 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+#7 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/api_donasi/system/Commands/Server/rewrite.php(46): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-12-12 02:25:20 --> Unknown column 'lokasi' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('SELECT `email`, `nama`, `user_level`, `no_telp`, `lokasi`
+FROM `user`
+WHERE `email` = \'afifosama66@gmail.com\'
+AND `password` = \'12df8cac3790ea2a0dba5e627fed0ce4\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `email`, `nama`, `user_level`, `no_telp`, `lokasi`
+FROM `user`
+WHERE `email` = \'afifosama66@gmail.com\'
+AND `password` = \'12df8cac3790ea2a0dba5e627fed0ce4\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `email`, `nama`, `user_level`, `no_telp`, `lokasi`
+FROM `user`
+WHERE `email` = \'afifosama66@gmail.com\'
+AND `password` = \'12df8cac3790ea2a0dba5e627fed0ce4\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `email`, `nama`, `user_level`, `no_telp`, `lokasi`
+FROM `user`
+WHERE `email` = :email:
+AND `password` = :password:', [...], false)
+ 5 APPPATH/Controllers/Api/Auth.php(79): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/CodeIgniter.php(929): App\Controllers\api\Auth->login()
+ 7 SYSTEMPATH/CodeIgniter.php(484): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\api\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
