@@ -25,14 +25,53 @@ class Prayer extends BaseController
         $data_prayer = [];
 
         $user_id = $this->request->getPost('user_id');
+        $panti_id = $this->request->getPost('panti_id');
 
         $builderPrayer = $this->db->table('prayer');
-        $builderPrayer->where(['prayer.user_id' => $user_id])->select('prayer.*, u.email, u.nama as nama_donatur, panti.nama as nama_panti, panti.id as id_panti, donasi.id as id_donasi');
+        $builderPrayer->select('prayer.*, u.email,u.image as fotoProfil, u.nama as nama_donatur, panti.nama as nama_panti, panti.id as id_panti, donasi.id as id_donasi');
         $builderPrayer->join('user u', 'u.id = prayer.user_id', 'left');
         $builderPrayer->join('panti', 'panti.id = prayer.panti_id', 'left');
         $builderPrayer->join('donasi', 'donasi.id = prayer.donasi_id', 'left');
-        $queryPrayer    =  $builderPrayer->get();
 
+        if ($user_id) {
+            $builderPrayer->where(['prayer.user_id' => $user_id]);
+            $queryPrayer    =  $builderPrayer->get();
+
+            if ($queryPrayer->getNumRows() > 0) {
+                $success = true;
+                $message = 'get list prayer success';
+                $data_prayer = $queryPrayer->getResultArray();
+            } else {
+                $success = false;
+                $message = 'get list prayer failed';
+            }
+            $output['success'] = $success;
+            $output['message'] = $message;
+            $output['data_prayer'] = $data_prayer;
+
+            return $this->response->setJSON($output);
+        }
+
+        if ($panti_id) {
+            $builderPrayer->where(['prayer.panti_id' => $panti_id]);
+            $queryPrayer    =  $builderPrayer->get();
+
+            if ($queryPrayer->getNumRows() > 0) {
+                $success = true;
+                $message = 'get list prayer success';
+                $data_prayer = $queryPrayer->getResultArray();
+            } else {
+                $success = false;
+                $message = 'get list prayer failed';
+            }
+            $output['success'] = $success;
+            $output['message'] = $message;
+            $output['data_prayer'] = $data_prayer;
+
+            return $this->response->setJSON($output);
+        }
+
+        $queryPrayer    = $builderPrayer->get();
         if ($queryPrayer->getNumRows() > 0) {
             $success = true;
             $message = 'get list prayer success';
@@ -74,7 +113,7 @@ class Prayer extends BaseController
 
         if ($insertDatas) {
             $success = true;
-            $message = 'Berhasil menambahkan doa, terimakasih atas doa yang telah Anda buat';
+            $message = 'Berhasil menambahkan doa, terimakasih atas doa yang telah Anda berikan';
         } else {
             $success = false;
             $message = 'Gagal menambahkan doa, silahkan coba kembali';

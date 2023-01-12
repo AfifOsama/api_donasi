@@ -27,11 +27,30 @@ class Impact extends BaseController
         $panti_id = $this->request->getPost('panti_id');
 
         $builderImpact = $this->db->table('impact');
-        $builderImpact->where(['impact.panti_id' => $panti_id])->select('impact.*, panti.nama as nama_panti, panti.id as id_panti, donasi.id as id_donasi, donasi.nama_donasi');
+        $builderImpact->select('impact.*, panti.nama as nama_panti, panti.id as id_panti, donasi.id as id_donasi, donasi.nama_donasi');
         $builderImpact->join('panti', 'panti.id = impact.panti_id', 'left');
         $builderImpact->join('donasi', 'donasi.id = impact.donasi_id', 'left');
-        $queryImpact    =  $builderImpact->get();
 
+        if ($panti_id) {
+            $builderImpact->where(['impact.panti_id' => $panti_id]);
+            $queryImpact    =  $builderImpact->get();
+            if ($queryImpact->getNumRows() > 0) {
+                $success = true;
+                $message = 'get list impact success';
+                $data_impact = $queryImpact->getResultArray();
+            } else {
+                $success = false;
+                $message = 'get list impact failed';
+            }
+
+            $output['success'] = $success;
+            $output['message'] = $message;
+            $output['data_impact'] = $data_impact;
+
+            return $this->response->setJSON($output);
+        }
+
+        $queryImpact    =  $builderImpact->get();
         if ($queryImpact->getNumRows() > 0) {
             $success = true;
             $message = 'get list impact success';
@@ -53,35 +72,58 @@ class Impact extends BaseController
         $success = false;
         $message = 'Gagal Proses Data';
 
-        $image = $this->request->getPost('image');
+        $image = $this->request->getFile('image');
         $panti_id = $this->request->getPost('panti_id');
         $deskripsi = $this->request->getPost('deskripsi');
         $donasi_id = $this->request->getPost('donasi_id');
+        $image = $this->request->getPost('image');
 
+        $path = $this->cek_directory_upload();
+        $namaGmbr = date('YmdHis') . ".jpg";
+        $imageData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $image));
+        $imageName = FCPATH . '/' . $path . $namaGmbr;
 
-        $dataValues['image'] = $image;
-        $dataValues['panti_id'] = $panti_id;
-        $dataValues['deskripsi'] = $deskripsi;
-        $dataValues['donasi_id'] = $donasi_id;
-        $tgl_buat = date('Y-m-d H:i:s');
-        $dataValues['date_created'] = $tgl_buat;
+        $namaGmbr = $path . $namaGmbr;
+        if ($imageName) {
+            file_put_contents($imageName, $imageData);
 
-        $builderInserts = $this->db->table('impact');
-        $insertDatas =  $builderInserts->insert($dataValues);
+            $dataValues['image'] = $namaGmbr;
+            $dataValues['panti_id'] = $panti_id;
+            $dataValues['deskripsi'] = $deskripsi;
+            $dataValues['donasi_id'] = $donasi_id;
+            $tgl_buat = date('Y-m-d H:i:s');
+            $dataValues['date_created'] = $tgl_buat;
 
-        if ($insertDatas) {
-            $success = true;
-            $message = 'Berhasil menambahkan konten dampak';
-        } else {
-            $success = false;
-            $message = 'Gagal menambahkan konten dampak, silahkan coba kembali';
+            $builderInserts = $this->db->table('impact');
+            $insertDatas =  $builderInserts->insert($dataValues);
+
+            if ($insertDatas) {
+                $success = true;
+                $message = 'Berhasil menambahkan konten dampak';
+            } else {
+                $success = false;
+                $message = 'Gagal menambahkan konten dampak, silahkan coba kembali';
+            }
         }
+
 
 
         $output['success'] = $success;
         $output['message'] = $message;
 
         return $this->response->setJSON($output);
+    }
+
+    private function cek_directory_upload()
+    {
+        $tanggal = Date('d');
+        $bulan      = Date('m');
+        $tahun   = Date('Y');
+        $path = "/uploads/foto_impact/" . $tahun . '/' . $bulan . '/' . $tanggal . '/';
+        if (!is_dir(FCPATH . '/' . $path)) {
+            mkdir(FCPATH . '/' . $path, 0777, TRUE);
+        }
+        return $path;
     }
 
     public function update_impact()
@@ -94,7 +136,6 @@ class Impact extends BaseController
         $panti_id = $this->request->getPost('panti_id');
         $deskripsi = $this->request->getPost('deskripsi');
         $donasi_id = $this->request->getPost('donasi_id');
-
 
         $dataValues['id'] = $id;
         $dataValues['image'] = $image;
