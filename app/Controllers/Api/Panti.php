@@ -188,13 +188,16 @@ class Panti extends BaseController
         $id = $this->request->getPost('id');
         $nama = $this->request->getPost('nama');
         $description = $this->request->getPost('description');
-        $image = $this->request->getPost('image');
         $logo = $this->request->getPost('logo');
         $alamat = $this->request->getPost('alamat');
+        $plan = $this->request->getPost('plan');
+        $longitude = $this->request->getPost('longitude');
+        $latitude = $this->request->getPost('latitude');
         $dokumen_sertifikat = $this->request->getPost('dokumen_sertifikat');
         $pengelola_id = $this->request->getPost('pengelola_id');
         $total_donasi = $this->request->getPost('total_donasi');
-        $dokumen_sertifikat = $this->request->getPost('dokumen_sertifikat');
+        $image = $this->request->getPost('image');
+
 
         $path = $this->cek_directory_upload();
         $namaGmbr = date('YmdHis') . ".jpg";
@@ -207,17 +210,11 @@ class Panti extends BaseController
 
             file_put_contents($imageName, $cleaned);
 
-            $dataValues['id'] = $id;
             $dataValues['nama'] = $nama;
             $dataValues['description'] = $description;
-            $dataValues['image'] = $image;
-            $dataValues['logo'] = $logo;
-            $dataValues['dokumen_sertifikat'] = $dokumen_sertifikat;
             $dataValues['alamat'] = $alamat;
-            $tgl_buat = date('Y-m-d H:i:s');
-            $dataValues['date_created'] = $tgl_buat;
-            $dataValues['pengelola_id'] = $pengelola_id;
-            $dataValues['total_donasi'] = $total_donasi;
+            $dataValues['plan'] = $plan;
+
 
             $builderUpdate = $this->db->table('panti');
             $builderUpdate->where(['id' => $id]);
@@ -326,6 +323,88 @@ class Panti extends BaseController
         $output['message'] = $message;
         $output['data_file'] = $data_file;
 
+        return $this->response->setJSON($output);
+    }
+
+    public function update_jumlah_donatur()
+    {
+        $success = false;
+        $message = 'Gagal Proses Data';
+
+        $id = $this->request->getPost('id');
+        $nama = $this->request->getPost('nama');
+        $description = $this->request->getPost('description');
+        $image = $this->request->getPost('image');
+        $logo = $this->request->getPost('logo');
+        $alamat = $this->request->getPost('alamat');
+        $dokumen_sertifikat = $this->request->getPost('dokumen_sertifikat');
+        $pengelola_id = $this->request->getPost('pengelola_id');
+        $total_donasi = $this->request->getPost('total_donasi');
+        $dokumen_sertifikat = $this->request->getPost('dokumen_sertifikat');
+
+        $path = $this->cek_directory_upload();
+        $namaGmbr = date('YmdHis') . ".jpg";
+        $imageData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $image));
+        $imageName = FCPATH . '/' . $path . $namaGmbr;
+
+        $namaGmbr = $path . $namaGmbr;
+        if ($imageName) {
+            $cleaned = strval(str_replace("\0", "", $imageName));
+
+            file_put_contents($imageName, $cleaned);
+
+            $dataValues['id'] = $id;
+            $dataValues['nama'] = $nama;
+            $dataValues['description'] = $description;
+            $dataValues['image'] = $image;
+            $dataValues['logo'] = $logo;
+            $dataValues['dokumen_sertifikat'] = $dokumen_sertifikat;
+            $dataValues['alamat'] = $alamat;
+            $tgl_buat = date('Y-m-d H:i:s');
+            $dataValues['date_created'] = $tgl_buat;
+            $dataValues['pengelola_id'] = $pengelola_id;
+            $dataValues['total_donasi'] = $total_donasi;
+
+            $builderUpdate = $this->db->table('panti');
+            $builderUpdate->where(['id' => $id]);
+            $updateData =  $builderUpdate->update($dataValues);
+            if ($updateData) {
+                $success = true;
+                $message = 'Berhasil ubah data panti';
+            } else {
+                $success = false;
+                $message = 'Gagal ubah data panti, silahkan coba kembali';
+            }
+        } else {
+            $success = false;
+            $message = 'Gagal upload data panti, silahkan coba kembali';
+        }
+
+        $output['success'] = $success;
+        $output['message'] = $message;
+
+        return $this->response->setJSON($output);
+    }
+
+    public function delete_panti()
+    {
+        $id = $this->request->getPost('id');
+        $success = false;
+
+
+        $builderDelete = $this->db->table('panti');
+        $deleteData =  $builderDelete->delete(['id' => $id]);
+
+        if ($deleteData) {
+            $success = true;
+            $message = 'Berhasil menghapus panti';
+        } else {
+            $success = false;
+            $message = 'Gagal menghapus panti, silahkan coba kembali';
+        }
+
+        $output['success'] = $success;
+        $output['message'] = $message;
         return $this->response->setJSON($output);
     }
 }
